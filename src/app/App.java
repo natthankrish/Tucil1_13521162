@@ -1,5 +1,6 @@
 package app;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 import struct.*;
 
@@ -36,11 +37,45 @@ public class App {
                 System.out.println("Invalid Card Deck. Please input the correct one!");
                 
             } else {
-                System.out.println("Halo");
+                ArrayList<String> result;
+                result = Deck.calculateDeck(inputCards);
+                Deck.displayResult(result);
+                String input = inputTray.nextLine();
+                System.out.print("Do you want to save the results? (Y/N): ");
+                input = inputTray.nextLine();
+
+                if (!input.equals("Y") && !input.equals("N")) {
+                    System.out.print("Wrong input! Please input (Y/N): ");
+                    input = inputTray.nextLine();
+                }
+
+                if (input.equals("Y")) {
+                    Deck.saveResultsToFile(inputCards, result);
+                }
             }
             return true;
-        } else if (choice.equals("2")){ 
+        } else if (choice.equals("2")){
+            System.out.println("Picking Random Card..."); 
+            System.out.print("Your Deck: "); 
             inputCards = Deck.randomizeDeck();
+            for (int i = 0; i < 4; i++) {
+                System.out.print(inputCards[i] + " ");
+            }
+            System.out.println();
+            ArrayList<String> result;
+            result = Deck.calculateDeck(inputCards);
+            Deck.displayResult(result);
+            System.out.print("Do you want to save the results? (Y/N): ");
+            String input = inputTray.nextLine();
+
+            if (!input.equals("Y") && !input.equals("N")) {
+                System.out.print("Wrong input! Please input (Y/N): ");
+                input = inputTray.nextLine();
+            }
+
+            if (input.equals("Y")) {
+                Deck.saveResultsToFile(inputCards, result);
+            }
             return true;
         } else { // choice = 3
             System.out.println("Thank you for using our App!");

@@ -2,7 +2,7 @@ package struct;
 import java.util.*;
 
 public class Map {
-    static Dictionary<String, Integer> dict = new Hashtable<String, Integer>();
+    Dictionary<String, Integer> dict = new Hashtable<String, Integer>();
     
     public Map() {
         // Dictionary Initialization
@@ -21,8 +21,8 @@ public class Map {
         dict.put("K", 13);      
     }
 
-    public static int getValue (String inputSuit) {
+    public int getValue (String inputSuit) {
         // Getting the value of the suit
         return dict.get(inputSuit);
-    }
+    }    
 }
