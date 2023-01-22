@@ -89,109 +89,29 @@ public class Deck {
                                                         res.add("(" + inputDeck[i] + " " + operators[m] + " " + inputDeck[j] + ") " + operators[n] + " (" + inputDeck[k] + " " + operators[o] + " " + inputDeck[l] + ")");
                                                     }
                                                 }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                } 
-            }
-        }
 
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                if (i != j) {
-                    for (int k = 0; k < 4; k++) {
-                        if (i != k && j != k) {
-                            for (int l = 0; l < 4; l++) {
-                                if (i != l && j != l && k != l) {
-                                    for (int m = 0; m < 4; m++) {
-                                        for (int n = 0; n < 4; n++) {
-                                            for (int o = 0; o < 4; o++) {
-                                                double temp = processCalculation(processCalculation(processCalculation(dict.getValue(inputDeck[i]), dict.getValue(inputDeck[j]), operators[m]), dict.getValue(inputDeck[k]), operators[n]), dict.getValue(inputDeck[l]), operators[o]);
+                                                temp = processCalculation(processCalculation(processCalculation(dict.getValue(inputDeck[i]), dict.getValue(inputDeck[j]), operators[m]), dict.getValue(inputDeck[k]), operators[n]), dict.getValue(inputDeck[l]), operators[o]);
                                                 if (temp == 24.0) {
                                                     if (!res.contains("((" + inputDeck[i] + " " + operators[m] + " " + inputDeck[j] + ") " + operators[n] + " " + inputDeck[k] + ") " + operators[o] + " " + inputDeck[l])) {
                                                         res.add("((" + inputDeck[i] + " " + operators[m] + " " + inputDeck[j] + ") " + operators[n] + " " + inputDeck[k] + ") " + operators[o] + " " + inputDeck[l]);
                                                     }
                                                 }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                } 
-            }
-        }
 
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                if (i != j) {
-                    for (int k = 0; k < 4; k++) {
-                        if (i != k && j != k) {
-                            for (int l = 0; l < 4; l++) {
-                                if (i != l && j != l && k != l) {
-                                    for (int m = 0; m < 4; m++) {
-                                        for (int n = 0; n < 4; n++) {
-                                            for (int o = 0; o < 4; o++) {
-                                                double temp = processCalculation(processCalculation(dict.getValue(inputDeck[i]), processCalculation(dict.getValue(inputDeck[j]), dict.getValue(inputDeck[k]), operators[n]), operators[m]), dict.getValue(inputDeck[l]), operators[o]);
+                                                temp = processCalculation(processCalculation(dict.getValue(inputDeck[i]), processCalculation(dict.getValue(inputDeck[j]), dict.getValue(inputDeck[k]), operators[n]), operators[m]), dict.getValue(inputDeck[l]), operators[o]);
                                                 if (temp == 24.0) {
                                                     if (!res.contains("(" + inputDeck[i] + " " + operators[m] + " (" + inputDeck[j] + " " + operators[n] + " " + inputDeck[k] + ")) " + operators[o] + " " + inputDeck[l])) {
                                                         res.add("(" + inputDeck[i] + " " + operators[m] + " (" + inputDeck[j] + " " + operators[n] + " " + inputDeck[k] + ")) " + operators[o] + " " + inputDeck[l]);
                                                     }
                                                 }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                } 
-            }
-        }
 
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                if (i != j) {
-                    for (int k = 0; k < 4; k++) {
-                        if (i != k && j != k) {
-                            for (int l = 0; l < 4; l++) {
-                                if (i != l && j != l && k != l) {
-                                    for (int m = 0; m < 4; m++) {
-                                        for (int n = 0; n < 4; n++) {
-                                            for (int o = 0; o < 4; o++) {
-                                                double temp = processCalculation(dict.getValue(inputDeck[i]), processCalculation(processCalculation(dict.getValue(inputDeck[j]), dict.getValue(inputDeck[k]), operators[n]), dict.getValue(inputDeck[l]), operators[o]), operators[m]);
+                                                temp = processCalculation(dict.getValue(inputDeck[i]), processCalculation(processCalculation(dict.getValue(inputDeck[j]), dict.getValue(inputDeck[k]), operators[n]), dict.getValue(inputDeck[l]), operators[o]), operators[m]);
                                                 if (temp == 24.0) {
                                                     if (!res.contains(inputDeck[i] + " " + operators[m] + " ((" + inputDeck[j] + " " + operators[n] + " " + inputDeck[k] + ") " + operators[o] + " " + inputDeck[l] + ")")) {
                                                         res.add(inputDeck[i] + " " + operators[m] + " ((" + inputDeck[j] + " " + operators[n] + " " + inputDeck[k] + ") " + operators[o] + " " + inputDeck[l] + ")");
                                                     }
                                                 }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                } 
-            }
-        }
 
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                if (i != j) {
-                    for (int k = 0; k < 4; k++) {
-                        if (i != k && j != k) {
-                            for (int l = 0; l < 4; l++) {
-                                if (i != l && j != l && k != l) {
-                                    for (int m = 0; m < 4; m++) {
-                                        for (int n = 0; n < 4; n++) {
-                                            for (int o = 0; o < 4; o++) {
-                                                double temp = processCalculation(dict.getValue(inputDeck[i]), processCalculation(dict.getValue(inputDeck[j]), processCalculation(dict.getValue(inputDeck[k]), dict.getValue(inputDeck[l]), operators[o]), operators[n]), operators[m]);
+                                                temp = processCalculation(dict.getValue(inputDeck[i]), processCalculation(dict.getValue(inputDeck[j]), processCalculation(dict.getValue(inputDeck[k]), dict.getValue(inputDeck[l]), operators[o]), operators[n]), operators[m]);
                                                 if (temp == 24.0) {
                                                     if (!res.contains(inputDeck[i] + " " + operators[m] + " (" + inputDeck[j] + " " + operators[n] + " (" + inputDeck[k] + " " + operators[o] + " " + inputDeck[l] + "))")) {
                                                         res.add(inputDeck[i] + " " + operators[m] + " (" + inputDeck[j] + " " + operators[n] + " (" + inputDeck[k] + " " + operators[o] + " " + inputDeck[l] + "))");
@@ -207,6 +127,7 @@ public class Deck {
                 } 
             }
         }
+
         long end = System.nanoTime();
         long time = end - start;
         res.add(String.valueOf(time));
