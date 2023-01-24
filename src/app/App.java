@@ -27,6 +27,7 @@ public class App {
         // choice = 1/2/3
 
         if (choice.equals("1")) {
+            System.out.println("Please input your 4 cards in space-separated format. If you input more than 4, the system would only process the first 4.");
             for (int i = 0; i < 4; i++) {
                 inputCards[i] = inputTray.next();
             }
